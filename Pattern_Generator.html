@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider round"></span>
+      </label>
+      <span id="themeLabel">Light Mode</span>
+    </div>
+    <div id="aiToggleContainer" class="ai-toggle">
+      <button id="modeToggleBtn">✨</button>
+      <span id="modeToggleTooltip">Custom pattern generation</span>
+    </div>
+    <div class="title">
+      <h1>Pattern Generator</h1>
+    </div>
+    <p id="mainDescription">
+      Create Simple Geometric Patterns Using Predefined Shapes.
+    </p>
+    <div class="controls">
+      <div id="geometricControls">
+        <div class="control-group">
+          <label for="modeSelect">Pattern Mode:</label>
+          <select id="modeSelect">
+            <option value="select">Select</option>
+            <option value="geometric">Geometric Pattern</option>
+          </select>
+        </div>
+        <br />
+        <div class="control-group">
+          <label for="patternInput">Enter Size:</label>
+          <input type="number" id="patternInput" placeholder="Enter a number" />
+        </div>
+        <br />
+        <div class="control-group">
+          <label for="selectShape">Choose Shape:</label>
+          <select id="selectShape">
+            <option value="select">Select</option>
+            <option value="pyramid">Pyramid</option>
+            <option value="square">Square</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="triangle">Triangle</option>
+            <option value="diamond">Diamond</option>
+            <option value="hourglass">Hourglass</option>
+            <option value="hollowsquare">Hollow Square</option>
+          </select>
+        </div>
+      </div>
+      <div id="customControls" style="display: none">
+        <div class="control-group">
+          <label for="customTextInput">Enter Text/Numbers:</label>
+          <input
+            type="text"
+            id="customTextInput"
+            placeholder="Type something..."
+          />
+        </div>
+      </div>
+      <br />
+      <button id="generateBtn">Generate Pattern</button>
+    </div>
+    <div class="title">
+      <h2>-- Generated Pattern --</h2>
+    </div>
+    <pre
+      id="patternOutput"
+    ><code id="patternCode">Your Pattern will appear here.</code></pre>
+    <script src="asciiGenerator.js"></script>
+    <script src="Pattern.js"></script>
+  </body>
+</html>
