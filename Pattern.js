@@ -96,7 +96,7 @@ generateBtn.addEventListener("click", function () {
         for (let i = 1; i <= size; i++) {
           let row = "";
 
-          for (let j = 1; j <= size; i++) { // Fixed bug here based on original code
+          for (let j = 1; j <= i; j++) {
             row += "*";
           }
 
